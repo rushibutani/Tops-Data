@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      background: rgb(9, 54, 84);
+    }
+
+    .container {
+      margin: 90px auto;
+      width: 40%;
+      top: 50%;
+      left: 50%;
+      background: white;
+      border-radius: 10px;
+      min-width: 450px;
+      /* position: absolute; */
+      min-height: 100px;
+    }
+
+    .newtask {
+      position: relative;
+      padding: 30px 20px;
+    }
+
+    .newtask input {
+      width: 75%;
+      height: 20px;
+      padding: 12px;
+      border-radius: 5px;
+    }
+
+    .newtask button {
+      float: right;
+      font-size: 16px;
+      background-color: #0d75ec;
+      border: none;
+      color: white;
+      cursor: pointer;
+      width: 20%;
+      height: 45px;
+      border-radius: 5px;
+    }
+
+    #todoList {
+      border-radius: 10px;
+      width: 100%;
+      padding: 10px 0 10px;
+      margin-top: 10px;
+      border: 1px solid black;
+    }
+
+    ul li {
+      list-style: none;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="newtask">
+        <input type="text" id="newTodoInput" placeholder="Add Tasks" />
+        <button id="addTodoBtn">Add</button>
+      </div>
+      <div class="tasks">
+        <ul id="todoList">
+          <li>Read a book</li>
+          <li>Lunch with caro</li>
+          <li>Feed the dog</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      // Function to create and add a new todo item to the list in the DOM
+      function addTodoItem() {
+        // Step 1: Get the value of the input field
+        const newTodoText = document.getElementById("newTodoInput").value;
+
+        // Step 2: Check if the input is not empty
+        if (newTodoText.trim() !== "") {
+          // Step 3: Create a new list item element
+          const newItem = document.createElement("li");
+
+          // Step 4: Set the content or text of the list item
+          const newItemText = document.createTextNode(newTodoText);
+          newItem.appendChild(newItemText);
+
+          // Step 5: Append the new todo item to the bottom of the list in the DOM
+          const todoList = document.getElementById("todoList");
+          todoList.appendChild(newItem);
+
+          // Step 6: Clear the input field after adding the new todo item
+          document.getElementById("newTodoInput").value = "";
+        }
+      }
+
+      // Add event listener to the button to trigger the function when clicked
+      const addTodoBtn = document.getElementById("addTodoBtn");
+      addTodoBtn.addEventListener("click", addTodoItem);
+    </script>
+  </body>
+</html>

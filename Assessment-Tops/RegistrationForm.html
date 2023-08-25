@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="icon" href="./Favicon.png">
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    <form onsubmit="return validform()">
+        <div><label for="Fisrt Name">Fisrt Name :</label></div>
+        <div><input type="text" placeholder="Enter your First Name" id="fisrtname"></div>
+        <p id="fisrtnameerror"></p>
+
+        <div><label for="Last Name">Last Name :</label></div>
+        <div><input type="text" placeholder="Enter your Last Name"></div>
+
+        <div><label for="Email">Email :</label></div>
+        <div><input type="email" placeholder="it should contain @..."></div>
+
+        <div><label for="Mobile">Mobile :</label></div>
+        <div><input type="tel" placeholder="only 10 digits are Allowed"></div>
+
+        <div><label for="Gender">Gender :</label></div>
+        <div>Male<input type="radio" name="Gender">
+        Female<input type="radio" name="Gender">
+        Other<input type="radio" name="Gender"></div>
+
+        <div><label for="Date Of Birth">Date Of Birth :</label></div>
+        <div><input type="datetime" name="Date Of Birth" id=""></div>
+
+        <div><label for="Address">Address :</label></div>
+        <div><textarea name="Address" id="" cols="30" rows="10"></textarea></div>
+
+        <div><label for="City">City :</label></div>
+        <div><input type="text" name="State"></div>
+
+        <div><label for="Area PIN">Area PIN :</label></div>
+        <div><input type="number"></div>
+
+        <div><label for="State">State :</label></div>
+        <div><input type="text" name="State" id=""></div>
+
+        <div><label for="Qualification">Qualification :</label></div>
+        <div><select name="Qualification" id="">
+            <option value="Select Qualification">Select Qualification :</option>
+            <option value="10th">10th</option>
+            <option value="12th">12th</option>
+            <option value="B.E">B.E</option>
+            <option value="B.Sc">B.Sc</option>
+            <option value="M.Sc">M.Sc</option>
+        </select></div>
+
+        <div><label for="Specialization">Specialization :</label></div>
+        <div><input type="checkbox" name="Computer Science" id="">Computer Science<br>
+        <input type="checkbox" name="Information Technology" id="">Information Technology<br>
+        <input type="checkbox" name="Computer Architecture" id="">Computer Architecture<br>
+        <input type="checkbox" name="Tele Communication" id="">Tele Communication</div>
+
+        <div><label for="Password">Password :</label></div>
+        <div><input type="password" name="Password" id=""></div>
+
+        <div><input type="submit" value="Registered" id="Registered"></div>
+    </form>
+
+    <script>
+        let fisrtname = document.getElementById("fisrtname")
+
+        function vaildForm() {
+                if (fisrtname.value == "") {
+                    // console.log('empty');
+                    document.getElementById("fisrtnameerror").innerHTML = "enter your name"
+                    event.preventDefault()
+                }
+                else if (fisrtname.value.length < 4) {
+                    document.getElementById("fisrtnameerror").innerHTML = "min 5 char"
+                    event.preventDefault()
+                }
+                else {
+                    document.getElementById("fisrtnameerror").innerHTML = ""
+
+                }
+            }
+    </script>
+</body>
+</html>
