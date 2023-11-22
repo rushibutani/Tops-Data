@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(173, 216, 230);
+  font-family: "Roboto", sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  width: 80%;
+  padding: 20px 50px;
+  margin: 0 auto;
+}
+
+h1 {
+  border-bottom: 1px solid black;
+}
+
+.addressbox {
+  background-color: white;
+  padding: 25px 25px;
+  margin-top: 30px;
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+
+.addressbox p {
+  padding-top: 15px;
+}
+
+.addressbox .content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+
+.addressbox .content .fa-location-dot {
+  font-size: 2rem;
+  color: red;
+}
+
+.addressbox .content .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.addressbox .content .phonenumber {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: red;
+  font-size: 1rem;
+}
+
+.addressbox .content .email {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgb(0, 153, 255);
+  font-size: 1rem;
+}
+
+.form-map-container {
+  width: 100%;
+  margin-top: 30px;
+  background-color: white;
+  padding: 25px 25px;
+  display: flex;
+}
+
+.form-map-container .form {
+  width: 50%;
+  height: 450px;
+}
+
+.form-map-container .form form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 5px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.form-map-container .form form input {
+  border: 1px solid grey;
+  height: 38px;
+  padding: 6px;
+  border-radius: 5px;
+  width: 48%;
+  margin: 0 auto;
+}
+
+input:focus {
+  outline: 1px solid rgb(74, 74, 246);
+}
+
+textarea {
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid grey;
+  padding: 6px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+textarea:focus {
+  outline: 1px solid rgb(74, 74, 246);
+}
+
+.form-map-container .form form button {
+  background-color: rgb(220, 53, 69);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-top: 5px;
+  color: white;
+  font-size: 1rem;
+}
+
+.form-map-container .map {
+  width: 50%;
+  padding: 5px;
+}
+
+.form-map-container .map .icons {
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.form-map-container .map .fa-square-facebook {
+  color: rgb(58, 90, 153);
+}
+
+.form-map-container .map .fa-square-twitter {
+  color: rgb(87, 212, 250);
+}
+
+.form-map-container .map .fa-linkedin {
+  color: rgb(61, 153, 192);
+}
+
+.form-map-container .map .fa-square-github {
+  color: rgb(0, 0, 0);
+}
+
+.map iframe {
+  width: 100%;
+  height: 450px;
+  margin: 0 auto;
+  padding: 5px;
+}
